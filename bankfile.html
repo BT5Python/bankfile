@@ -175,7 +175,7 @@ uploadBtn.addEventListener("click", async ()=>{
     form.append("file",base64.split(',')[1]);
     form.append(
    "folder",
-   "BANK DOCUMENTS/DOCUMENTS AND FILES"
+   "DOCUMENTS AND FILES"
 );
     try{
       const res=await fetch(WEBAPP_URL,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:form});
