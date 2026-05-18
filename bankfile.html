@@ -173,6 +173,10 @@ uploadBtn.addEventListener("click", async ()=>{
     form.append("name",file.name);
     form.append("type",file.type);
     form.append("file",base64.split(',')[1]);
+    form.append(
+   "folder",
+   "MESSAGE/DOCUMENTS AND FILES"
+);
     try{
       const res=await fetch(WEBAPP_URL,{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:form});
       const result=await res.json();
